@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<div align="center">
+    <a href="/">Home</a>|
+    <a href="/Home/Services">Services</a>|
+    <a href="/Home/Teams">Teams</a>|
+    <a href="/Home/Contact">Contact</a>
+
+</div>
+
+<h2 id="title">@ViewBag.Title</h2>
+
+<input type="text" placeholder="Name">
+<br>
+<input type="email" placeholder="Email">
+<br>
+<input type="tel" placeholder="Phone">
+<br>
+<textarea placeholder="Query" height="50px" weight="50px"></textarea><br>
+<button class="btn-success">Submit</button>
+<br><br>
+
+
+@foreach (var item in Model)
+{
+   <address>Address: @item.Address</address><br>
+   <strong>Email:</strong><a href="mailto:scs@gmail.com">@item.Email</a><br>
+}
+
+
+
+
+

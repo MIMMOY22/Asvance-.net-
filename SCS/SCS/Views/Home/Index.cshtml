@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div align="center">
+    <a href="/">Home</a>|
+    <a href="/Home/Services">Services</a>|
+    <a href="/Home/Teams">Teams</a>|
+    <a href="/Home/Contact">Contact</a>
+
+</div>
+
+@foreach (var item in Model)
+  {
+
+    <h5>@item.Welcome</h5>
+    <h3>@item.Title</h3>
+    <p>@item.Massage</p>
+  }

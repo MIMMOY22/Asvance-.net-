@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Services";
+}
+
+<div align="center">
+    <a href="/">Home</a>|
+    <a href="/Home/Services">Services</a>|
+    <a href="/Home/Teams">Teams</a>|
+    <a href="/Home/Contact">Contact</a>
+
+</div>
+
+    <h2 id="title">@ViewBag.Title.</h2>
+    
+
+    <ol>
+        @foreach (var item in Model)
+        {
+            <li>
+                <h6>@item.Title</h6>
+                <ul>
+                    <li>@item.Details</li>
+                    <li>Cost:<b>@item.Cost</b></li>
+                </ul>
+            </li>
+        }
+    </ol>
